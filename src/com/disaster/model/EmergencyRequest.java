@@ -6,7 +6,10 @@ public class EmergencyRequest {
     private int severity;
     private int peopleAffected;
 
-    public EmergencyRequest(String requestType, int severity, int peopleAffected) {
+    public EmergencyRequest(String requestType,
+                            int severity,
+                            int peopleAffected) {
+
         this.requestType = requestType;
         this.severity = severity;
         this.peopleAffected = peopleAffected;
@@ -25,8 +28,17 @@ public class EmergencyRequest {
     }
 
     public void displayRequest() {
+
         System.out.println("Request Type: " + requestType);
         System.out.println("Severity: " + severity);
         System.out.println("People Affected: " + peopleAffected);
+    }
+
+    @Override
+    public String toString() {
+
+        return "Request Type: " + requestType +
+                " | Severity: " + severity +
+                " | People Affected: " + peopleAffected;
     }
 }
